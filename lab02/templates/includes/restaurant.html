@@ -1,0 +1,18 @@
+<div class="restaurant">
+    <div class="title">{{ restaurant.name }}</div>
+    <div class="img"><img src="{{ restaurant.image_url }}" width="318px" /></div>
+    <div class="place">{{ restaurant.display_address }}</div>
+    <div class="details">
+        <span class="attribute">Price:</span>
+        <span class="info">{{ restaurant.price }}</span>
+    </div>
+    <div class="details">
+        <span class="attribute">Rating:</span>
+        <span class="info">{{ restaurant.rating }}</span>
+    </div>
+    <div class="details">
+        <span class="attribute">#Reviews:</span>
+        <span class="info">{{ restaurant.review_count }}</span>
+    </div>
+    <div class="blank"> </div>
+</div>

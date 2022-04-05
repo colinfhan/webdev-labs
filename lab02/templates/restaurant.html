@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+    <meta charset="UTF-8"><title>Top Restaurant</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
+    <link rel="stylesheet" href="/static/style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Top Restaurant</title>
+    <style>
+        main {
+            width: 320px;
+            border: solid 1px #e6e4e4;
+        }
+        .restaurant {
+            display: inline-block;
+        }
+        .title {
+            font-size: x-large;
+            font-weight: bolder;
+            padding: 15px;
+        }
+        .place {
+            padding: 15px;
+        }
+        .img {
+            max-height: 240px;
+            overflow: hidden;
+        }
+        .details {
+            padding-left: 15px;
+            width: 100%;
+            border-bottom: solid 1px #e7e7e7;
+            line-height: 30px;
+        }
+        .info {
+            font-weight: bold;
+            left: 140px;
+            position: fixed;
+        }
+        .blank {
+            width: 100%;
+            height: 20px;
+        }
+    </style>
+</head>
+<body>
+    {% include 'includes/header.html' %}
+
+    <main>
+        {% include 'includes/restaurant.html' %}
+        <div class="restaurant">
+            <div class="title">{{ restaurant1.name }}</div>
+            <div class="img"><img src="{{ restaurant.image_url }}" width="318px" /></div>
+            <div class="place">{{ restaurant1.display_address }}</div>
+            <div class="details">
+                <span class="attribute">Price:</span>
+                <span class="info">{{ restaurant1.price }}</span>
+            </div>
+            <div class="details">
+                <span class="attribute">Rating:</span>
+                <span class="info">{{ restaurant1.rating }}</span>
+            </div>
+            <div class="details">
+                <span class="attribute">#Reviews:</span>
+                <span class="info">{{ restaurant1.review_count }}</span>
+            </div>
+            <div class="blank"> </div>
+        </div>
+        <div class="restaurant">
+            <div class="title">{{ restaurant2.name }}</div>
+            <div class="img"><img src="{{ restaurant.image_url }}" width="318px" /></div>
+            <div class="place">{{ restaurant2.display_address }}</div>
+            <div class="details">
+                <span class="attribute">Price:</span>
+                <span class="info">{{ restaurant2.price }}</span>
+            </div>
+            <div class="details">
+                <span class="attribute">Rating:</span>
+                <span class="info">{{ restaurant2.rating }}</span>
+            </div>
+            <div class="details">
+                <span class="attribute">#Reviews:</span>
+                <span class="info">{{ restaurant2.review_count }}</span>
+            </div>
+            <div class="blank"> </div>
+        </div>
+        <div class="restaurant">
+            <div class="title">{{ restaurant3.name }}</div>
+            <div class="img"><img src="{{ restaurant.image_url }}" width="318px" /></div>
+            <div class="place">{{ restaurant3.display_address }}</div>
+            <div class="details">
+                <span class="attribute">Price:</span>
+                <span class="info">{{ restaurant3.price }}</span>
+            </div>
+            <div class="details">
+                <span class="attribute">Rating:</span>
+                <span class="info">{{ restaurant3.rating }}</span>
+            </div>
+            <div class="details">
+                <span class="attribute">#Reviews:</span>
+                <span class="info">{{ restaurant3.review_count }}</span>
+            </div>
+            <div class="blank"> </div>
+        </div>
+    </main>
+</body>
+</html>
+
