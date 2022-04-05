@@ -7,12 +7,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Top Restaurant</title>
     <style>
-        main {
+        main > div {
+            display: inline-block;
             width: 320px;
             border: solid 1px #e6e4e4;
-        }
-        .restaurant {
-            display: inline-block;
         }
         .title {
             font-size: x-large;
@@ -23,7 +21,7 @@
             padding: 15px;
         }
         .img {
-            max-height: 240px;
+            height: 210px;
             overflow: hidden;
         }
         .details {
@@ -32,10 +30,12 @@
             border-bottom: solid 1px #e7e7e7;
             line-height: 30px;
         }
+        .attribute {
+            width: 85px;
+            display: inline-block;
+        }
         .info {
             font-weight: bold;
-            left: 140px;
-            position: fixed;
         }
         .blank {
             width: 100%;
@@ -50,7 +50,7 @@
         {% include 'includes/restaurant.html' %}
         <div class="restaurant">
             <div class="title">{{ restaurant1.name }}</div>
-            <div class="img"><img src="{{ restaurant.image_url }}" width="318px" /></div>
+            <div class="img"><img src="{{ restaurant1.image_url }}" width="318px" /></div>
             <div class="place">{{ restaurant1.display_address }}</div>
             <div class="details">
                 <span class="attribute">Price:</span>
@@ -68,7 +68,7 @@
         </div>
         <div class="restaurant">
             <div class="title">{{ restaurant2.name }}</div>
-            <div class="img"><img src="{{ restaurant.image_url }}" width="318px" /></div>
+            <div class="img"><img src="{{ restaurant2.image_url }}" width="318px" /></div>
             <div class="place">{{ restaurant2.display_address }}</div>
             <div class="details">
                 <span class="attribute">Price:</span>
@@ -86,7 +86,7 @@
         </div>
         <div class="restaurant">
             <div class="title">{{ restaurant3.name }}</div>
-            <div class="img"><img src="{{ restaurant.image_url }}" width="318px" /></div>
+            <div class="img"><img src="{{ restaurant3.image_url }}" width="318px" /></div>
             <div class="place">{{ restaurant3.display_address }}</div>
             <div class="details">
                 <span class="attribute">Price:</span>
