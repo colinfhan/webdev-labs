@@ -1,0 +1,8 @@
+Q: What is the value of SQLAlchemy?
+A: SQLAlchemy is the Python SQL toolkit and Object Relational Mapper that gives application developers the full power and flexibility of SQL. In other words, SQLAlchemy is a python data persistence layer framework.
+
+Q: What is a model?
+A: Model is the business model, in this case also the data model. It is instantiated by the received data.
+
+Q: What is a view?
+A: View is the interface for feedback to the user. It is used here to organize and manipulate the model, formatting it for response.
