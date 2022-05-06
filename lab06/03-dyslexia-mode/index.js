@@ -5,7 +5,7 @@
 
 
 // toggle dyslexia support
-const isPressed = window.localStorage.getItem('dyslexic') === 'false';
+const isPressed = window.localStorage.getItem('dyslexic') === 'true';
 if(isPressed) {
     document.body.classList.add('dyslexia-mode');
 }
